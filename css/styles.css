@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+* {
+  margin-right: 0px;
+}
+
 h2 {
   margin: 0;
   padding: 0;
@@ -359,7 +363,6 @@ span {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 58%;
 }
 
 .middle-top-text h2 {
@@ -381,8 +384,7 @@ span {
 
 .middle-top-timeline {
   display: flex;
-  justify-content: space-evenly;
-  width: 94%;
+  justify-content: center;
 }
 
 .circle {
@@ -392,6 +394,12 @@ span {
   align-items: center;
   gap: 24px;
   padding: 26px 0px;
+}
+
+.outer-wing {
+  width: 83px;
+  height: 1px;
+  background: #e6e9f2;
 }
 
 .wing-left {
@@ -912,7 +920,7 @@ span {
 
 .footer-content-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 40px;
   width: 100%;
 }
@@ -1032,6 +1040,19 @@ span {
 }
 
 @media (min-width: 1024px) {
+  .top-content {
+    justify-content: center;
+  }
+
+  .middle-bottom-content {
+    margin: 5%;
+  }
+
+  .form-left,
+  .form-right {
+    align-items: center;
+  }
+
   .header-links .header-button:hover {
     background-color: white;
     color: #2476ff;
@@ -1042,13 +1063,21 @@ span {
     transform: translate(2px);
   }
 
-  .top-content-info-link .play-button:hover {
+  .top-content-info-link .play-button:hover > i,
+  .top-content-info-link .play-button:hover > span {
     color: #2476ff;
+  }
+
+  .top-content-info-link .play-button:hover {
     background-color: white;
   }
 
   .top-content-info-link p:hover {
     transform: translate(2px);
+  }
+
+  .card:hover {
+    box-shadow: 10px 10px 5px #67778875, -10px -10px 5px #67778875;
   }
 
   .card-play-video:hover {
@@ -1087,6 +1116,11 @@ span {
   .google-ads-icon,
   .calender-icon {
     animation: none;
+  }
+
+  .header {
+    position: relative;
+    width: auto;
   }
 
   .desktop-links {
@@ -1148,6 +1182,15 @@ span {
   .calender-icon {
     left: 77px;
     top: 229px;
+  }
+
+  .outer-wing {
+    display: none;
+  }
+
+  .wing-left,
+  .wing-right {
+    width: 58.5px;
   }
 
   .price-table {
@@ -1223,7 +1266,7 @@ span {
   }
 }
 
-@media (max-width: 767px) and (min-width: 360px) {
+@media (max-width: 767px) {
   .google-icon,
   .atlassian-icon,
   .asana-icon,
@@ -1234,6 +1277,11 @@ span {
     animation: none;
   }
 
+  .header {
+    position: relative;
+    width: auto;
+  }
+
   .desktop-links {
     display: none;
   }
@@ -1241,6 +1289,7 @@ span {
   .top-content {
     flex-direction: column;
     height: 100%;
+    padding: 0px 0px 0px 0px;
   }
 
   .top-content-info {
@@ -1308,9 +1357,10 @@ span {
   }
 
   .wing-left,
-  .wing-right {
+  .wing-right,
+  .outer-wing {
     display: none;
-    width: 1px;
+    width: 0px;
   }
 
   .price-table {
@@ -1378,6 +1428,10 @@ span {
 
   .form-right {
     justify-content: center;
+  }
+
+  .info-hr {
+    width: 90%;
   }
 
   .form-group {
